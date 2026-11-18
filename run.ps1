@@ -8,6 +8,10 @@ if (-not (Test-Path $python)) {
     Write-Host "Python virtual environment not found at .venv. Follow the setup steps in README.md." -ForegroundColor Red
     exit 1
 }
+if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+    Write-Host "npm not found. Install Node.js (see README.md). If you just installed it, restart your terminal or editor." -ForegroundColor Red
+    exit 1
+}
 if (-not (Test-Path (Join-Path $root "frontend\node_modules"))) {
     Write-Host "Frontend dependencies missing. Run: cd frontend; npm install" -ForegroundColor Red
     exit 1

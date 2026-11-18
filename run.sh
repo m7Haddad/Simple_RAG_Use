@@ -10,6 +10,10 @@ if [ ! -x "$PY" ]; then
   echo "Python virtual environment not found at .venv. Follow the setup steps in README.md." >&2
   exit 1
 fi
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm not found. Install Node.js (see README.md). If you just installed it, restart your terminal or editor." >&2
+  exit 1
+fi
 if [ ! -d "$ROOT/frontend/node_modules" ]; then
   echo "Frontend dependencies missing. Run: cd frontend && npm install" >&2
   exit 1
