@@ -190,7 +190,3 @@ Built with [FastAPI](https://fastapi.tiangolo.com), [LangChain](https://www.lang
 Several ideas, such as storing extracted text for fast re-indexing and skipping
 the LLM when nothing relevant is found, were inspired by studying
 [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm).
-
-## License
-
-[MIT](LICENSE)
